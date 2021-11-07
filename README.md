@@ -13,6 +13,5 @@ Agristores was developed to allow agriculture retailers access to a variety of p
 	git remote remove origin
 	git remote add origin https://github.com/greatsilas23/Agristores-technologies
 	git clone https://github.com/greatsilas23/Agristores-technologies
-	git pull https://github.com/greatsilas23/Agristores-technologies
-	firefox file:///home/silas/Desktop/Agristores-technologies/index.html
+	firefox file:///home/silas/Desktop/Agristores-technologies/Agristores-technologies/index.html
 ``` 
