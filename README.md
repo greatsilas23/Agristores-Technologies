@@ -10,8 +10,9 @@ Agristores was developed to allow agriculture retailers access to a variety of p
 ```bash
 	mkdir /home/silas/Desktop/Agristores-technologies/
 	cd /home/silas/Desktop/Agristores-technologies
+	git remote remove origin
 	git remote add origin https://github.com/greatsilas23/Agristores-technologies
-	git clone remote origin
-	git pull remote origin
+	git clone https://github.com/greatsilas23/Agristores-technologies
+	git pull https://github.com/greatsilas23/Agristores-technologies
 	firefox file:///home/silas/Desktop/Agristores-technologies/index.html
 ``` 
