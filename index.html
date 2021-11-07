@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="https://picsum.photos/10/10">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Web site created to allow trade of vehicles">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body onload="showItem()">
+        <!--DIV: MAIN DIV HOLDING ALL OTHER DIVS-->
+        <div class="top_root_element">
+            <!-- DIV: HIDDEN BLUR BACKGROUND FOR POPUPS-->
+            <div id="opaqueBackground" class="opaqueBackground hide_stuff" onclick="hidePopup()">
+            </div>
+            <!--DIV: COMPANY SLOGAN-->
+            <div class="main_background">
+                <div class="container">
+                    <center>
+                        <div class="portfolio_text">
+                            <h2>YOUR PORTFOLIO</h2>
+                            <h2>"EVERY PHOTO TELLS A STORY"</h2>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <!--DIV: SEPARATE SECTIONS OF THE PAGE-->
+            <div class="welcome_section flex_stuff horiz">
+                <div>
+                    <h2>ITEMS IN OUR GALLERY</h2>
+                </div>
+                <div>
+                    <button class="myAddBn" onclick="showPopup()">ADD</button>
+                </div>
+                <!--DIV: HIDDEN FORM TO ADD USERS-->
+                <div id="myAddForm" class="myAddForm hide_stuff">
+                    <center>
+                        <h2>ADD ITEM</h2>
+                        <form name="myAddForm" onsubmit="addItem()">
+                            <label>Item Name:</label>
+                            <input name="itemName" placeholder="Example: Wheelbarrow"><br>
+                            <label>Item Price:</label>
+                            <input name="itemPrice" placeholder="Example: Ksh. 50,000"><br>
+                            <input type="submit">
+                        </form>
+                    </center>
+                </div>
+            </div>
+            <!--DIV: SHOW GLIMPSE OF ITEMS AVAILABLE-->
+            <div class="card_container flex_stuff horiz">
+                <div class="card">
+                    <h2>PLOUGH 1</h2>
+                    <img class="img_stuff" src="./img_ploug_1.jpg" alt="profile" width="200" height="200">
+                    <p>MODERN</p>
+                </div>
+                <div class="card">
+                    <h2>PLOUGH 2</h2>
+                    <img class="img_stuff" src="./img_ploug_2.jpeg" alt="profile" width="200" height="200">
+                    <p>MODERN</p>
+                </div>
+                <div class="card">
+                    <h2>PLOUGH 3</h2>
+                    <img class="img_stuff" src="./img_ploug_3.jpeg" alt="profile" width="200" height="200">
+                    <p>MODERN</p>
+                </div>
+                <div class="card">
+                    <h2>PLOUGH 4</h2>
+                    <img class="img_stuff" src="./img_ploug_4.jpg" alt="profile" width="200" height="200">
+                    <p>MODERN</p>
+                </div>
+                <div class="card">
+                    <h2>PLOUGH 5</h2>
+                    <img class="img_stuff" src="./img_ploug_4.jpg" alt="profile" width="200" height="200">
+                    <p>MODERN</p>
+                </div>
+                <div class="card">
+                    <h2>PLOUGH 6</h2>
+                    <img class="img_stuff" src="./img_ploug_4.jpg" alt="profile" width="200" height="200">
+                    <p>MODERN</p>
+                </div>
+                <div class="card">
+                    <h2>PLOUGH 7</h2>
+                    <img class="img_stuff" src="./img_ploug_4.jpg" alt="profile" width="200" height="200">
+                    <p>MODERN</p>
+                </div>
+                <div class="card">
+                    <h2>PLOUGH 8</h2>
+                    <img class="img_stuff" src="./img_ploug_4.jpg" alt="profile" width="200" height="200">
+                    <p>MODERN</p>
+                </div>
+            </div>
+            <div class="separator_element">
+                <h2>SEARCH FOR AN ITEM</h2>
+            </div>
+            <div class="tabbed_menu_container flex_stuff center_stuff">
+                <div id="tabbed_menu">
+                    <div class="btns">
+                        <button id="default_open" class="tablink default_open">USED</button>
+                        <button class="tablink">NEW</button>
+                        <button class="tablink">IMPOR</button>
+                    </div>
+                    <div id="used" class="tabcontent flex_stuff center_stuff vertic">
+                        <form name="searchNewItems">
+                            <label>Name</label>
+                            <input name="searchItem" placeholder="Example: Wheelbarrow">
+                            <label>Price</label>
+                            <select>
+                                <option><label>Below Ksh. 50,000</label></option>
+                                <option><label>Ksh. 50,000</label></option>
+                                <option><label>Above Ksh. 50,000</label></option>
+                            </select>
+                            <button>SEARCH</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="separator_element">
+                <h2>VIEW AVAILABLE ITEMS</h2>
+            </div>
+            <div class="tabbed_menu_container flex_stuff center_stuff">
+                <table id="myTbl" class="myTbl">
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                    </tr>
+                    <tr></tr>
+                </table>
+            </div>
+            <div class="separator_element">
+                <h2>REACH US ON SOCIAL MEDIA</h2>
+            </div>
+            <div class="contact_support flex_stuff horiz center_stuff">
+                <div class="card">
+                    <img src="./instagram.png" width="150" height="150" alt="">
+                    <div id="gram">
+                        <h3>@silas.n_</h3>
+                    </div>
+                </div>
+                <div id="details_card" class="card">
+                    <img src="./facebook.png" width="200" height="150" alt="">
+                    <div id="gram">
+                        <h3>@Silas Nyamwange</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flex_stuff center_stuff">
+                <h2>greatsilas23 &copy; 2021</h2>
+            </div>
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>
