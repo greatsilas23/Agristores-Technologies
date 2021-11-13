@@ -1,6 +1,6 @@
 /*
 	Date created: Sep 24, 2021 
-	Date modified: Nov 7, 2021 
+	Date modified: Nov 10, 2021 
 */
 
 //constants
@@ -15,18 +15,9 @@ let searchItem = searchNewItems.searchItem
 let popupIsShowing = false
 let itemsAvailable = new Array()
 //operational methods
-function getUpdates(){
-	let str = localStorage.getItem("itemsObject")
-	if(str !== null)
-		itemsAvailable = JSON.parse(str)
-}
-function setUpdates(){
-	localStorage.setItem("itemsObject", JSON.stringify(itemsAvailable))
-}
 function addItem(){
 	event.preventDefault()
 	hidePopup()
-	getUpdates()
 	itemsAvailable.push({
 		idGiven: itemId++,
 		name: itemName,
@@ -66,8 +57,12 @@ function getItem(){
 }
 
 //style methods
-function showPopup(){
+function showPopup(e){
+	let thisItem = e.parentElement.parentElement.getAttribute("id")
+	const isUsingPopup = document.getElementById(thisItem)
+	window.scroll(isUsingPopup.style.top, isUsingPopup.style.left)
 	if(!popupIsShowing){
+		window.scroll(0, 0)
 		opaqueBackground.style.display = "block"
 		collectDataForm.style.display = "block"
 		popupIsShowing = true
