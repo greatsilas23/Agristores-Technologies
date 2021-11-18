@@ -146,10 +146,9 @@ body
 .card_container
 {
     height: calc(300px - 10px);
-    max-width: calc(1640px - 20px);
-    min-width: calc(1640px - 20px);
+    width: calc(1640px - 20px);
     overflow-x: scroll;
-    padding: 10px 20px;
+    padding: 10px;
     background-color: red;
 }
 .spaceEven
