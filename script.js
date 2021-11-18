@@ -6,6 +6,7 @@
 //constants
 const opaqueBackground = document.getElementById("opaqueBackground")
 const collectDataForm = document.getElementById("myAddForm")
+const subsidiaryForm = document.getElementById("mySubsidiaryForm")
 const resultTable = document.getElementById("myTbl")
 //variables
 let itemId = 0
@@ -60,11 +61,25 @@ function getItem(){
 function showPopup(e){
 	let thisItem = e.parentElement.parentElement.getAttribute("id")
 	const isUsingPopup = document.getElementById(thisItem)
+	//use scroll() to position popup and open page
 	window.scroll(isUsingPopup.style.top, isUsingPopup.style.left)
 	if(!popupIsShowing){
 		window.scroll(0, 0)
 		opaqueBackground.style.display = "block"
 		collectDataForm.style.display = "block"
+		popupIsShowing = true
+	} else {
+
+	}
+}
+function showSubsidiary(e){
+	let thisItem = e.parentElement.parentElement.getAttribute("name")
+	const isUsingPopup = document.getElementById(thisItem)
+	//use scroll() to position popup and open page
+	if(!popupIsShowing){
+		window.scroll(isUsingPopup.getBoundingClientRect().top, isUsingPopup.getBoundingClientRect().left)
+		opaqueBackground.style.display = "block"
+		subsidiaryForm.style.display = "block"
 		popupIsShowing = true
 	} else {
 

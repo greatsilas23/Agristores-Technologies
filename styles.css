@@ -2,16 +2,17 @@
 /*Date modified: Nov 7, 2021 */
 body
 {
-    width: 97.5vw;
+    width: 98vw;
 }
 
 .top_root_element
 {
     height: 1900px;
-    width: 97.5vw;
+    width: 98vw;
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 .main_background
 {
@@ -47,8 +48,8 @@ body
 .card
 {
     height: 280px;
-    min-width: calc(15vw - 10px);
-    max-width: calc(15vw - 10px);
+    min-width: calc(150px - 10px);
+    max-width: calc(150px - 10px);
     box-shadow: rgb(51, 51, 51) 10px 10px 20px;
     background-color: white;
     padding: 0px 10px;
@@ -136,7 +137,8 @@ body
 .card_container
 {
     height: calc(300px - 10px);
-    width: calc(97.5vw - 20px);
+    max-width: calc(1640px - 20px);
+    min-width: calc(1640px - 20px);
     overflow-x: scroll;
     padding: 10px 20px;
     background-color: red;
