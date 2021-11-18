@@ -47,16 +47,25 @@ body
 }*/
 .card
 {
-    height: 280px;
+    height: 250px;
     min-width: calc(150px - 10px);
     max-width: calc(150px - 10px);
     box-shadow: rgb(51, 51, 51) 10px 10px 20px;
     background-color: white;
-    padding: 0px 10px;
+    /*padding: 0px 10px;*/
+    padding: 7px;
     border-radius: 10px;
     overflow: hidden;
     transition: all 250ms ease-in-out 0s;
     margin-right: 30px;
+}
+.card:hover
+{
+    box-shadow: rgb(0, 0, 0) 20px 20px 40px;
+}
+.factualCards:hover
+{
+    filter: invert(80%);
 }
 .img_stuff
 {
@@ -142,6 +151,10 @@ body
     overflow-x: scroll;
     padding: 10px 20px;
     background-color: red;
+}
+.spaceEven
+{
+    justify-content: space-evenly;
 }
 .default_open
 {

@@ -2,10 +2,92 @@
     <html lang="en">
         <head>
             <meta charset="utf-8">
-            <link rel="icon" href="https://picsum.photos/10/10">
+            <link rel="icon" class="addBorderRadius" href="./icon.png">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="description" content="Web site created to allow trade of vehicles">
             <link rel="stylesheet" href="./styles.css">
+            <style type="text/css">
+                .addBorderRadius
+                {
+                    border-radius: 20px;
+                }
+                .changeColor
+                {
+                    filter: invert(100%);
+                }
+                .moveLeft
+                {
+                    position: absolute;
+                    top: 15px;
+                    left: 5vw;
+                }
+                .moveRight
+                {
+                    position: absolute;
+                    top: 15px;
+                    left: 70vw;
+                }
+                .moveRightMore
+                {
+                    position: absolute;
+                    top: 15px;
+                    left: 75vw;
+                }
+                .moveIntoSearch
+                {
+                    position: absolute;
+                    top: 15px;
+                    left: 84vw;
+                }
+                .moveRightMost
+                {
+                    position: absolute;
+                    top: 15px;
+                    left: 90vw;
+                }
+                .underlineStuff:hover
+                {
+                    border-bottom: solid 4px white;
+                }
+                .defaultUnderline
+                {
+                    border-bottom: solid 4px white;
+                }
+                .myTopLinks
+                {
+                    height: 45px;
+                    width: 80px;
+                }
+                .mySearchBar
+                {
+                    height: 26px;
+                    width: 140px;
+                    outline: none;
+                    border: none;
+                }
+                .hideOverflow
+                {
+                    overflow: hidden;
+                }
+                .stickyDiv
+                {
+                    width: 100vw;
+                    height: 60px;
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    background-color: red;
+                    z-index: 3;
+                }
+                .positionAtTop
+                {
+                    position: relative;
+                    height: 40px;
+                    width: 40vw;
+                    top: -240px;
+                    left: 0vw ;
+                }
+            </style>
         </head>
         <body onload="showItem()">
             <!--DIV: MAIN DIV HOLDING ALL OTHER DIVS-->
@@ -17,7 +99,31 @@
                 <div class="main_background">
                     <div class="container">
                         <center>
+                            <div class="navigationContainer stickyDiv flex_stuff horiz spaceEven">
+                                <div class="myTopLinks moveLeft" onclick=""> 
+                                    <img class="changeColor" src="./menu.png" width="26" height="26" alt="menu">
+                                </div>
+                                <div class="myTopLinks moveRight">
+                                    <img class="changeColor" src="./messages.png" width="26" height="26" alt="messages">
+                                </div>
+                                <div class="moveRightMore">
+                                    <input type="text" class="mySearchBar addBorderRadius">
+                                </div>
+                                <div class="moveIntoSearch">
+                                    <img src="./search.png" width="26" height="26" alt="search">
+                                </div>
+                                <div class="moveRightMost changeColor addBorderRadius hideOverflow">
+                                    <img src="git.png" width="26" height="26" alt="search">
+                                </div>
+                            </div>
                             <div class="portfolio_text">
+                                <div class="flex_stuff horiz positionAtTop spaceEven">
+                                    <div class="myTopLinks underlineStuff defaultUnderline" onclick=""><h3>Portfolio</h3></div>
+                                    <div class="myTopLinks underlineStuff" onclick=""><h3>About</h3></div>
+                                    <div class="myTopLinks underlineStuff" onclick=""><h3>Values</h3></div>
+                                    <div class="myTopLinks underlineStuff" onclick=""><h3>Excutives</h3></div>
+                                </div>
+                                <img src="./icon.png" width="100" height="100" alt="icon">
                                 <h2>YOUR PORTFOLIO</h2>
                                 <h2>"EVERY PHOTO TELLS A STORY"</h2>
                             </div>
@@ -34,91 +140,91 @@
                     </div>
                 </div>
                 <div id="mySubsidiaries" class="card_container flex_stuff horiz">
-                    <div class="card" onclick="alert('subsidiary service')" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRIPAY</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agrinews" title="Agristores-technologies/Agrinews">
                             <h2>AGRINEWS</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES WAREHOUSES</h2>  
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES DIGITAL & INFO. PLATFORMS</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES LOGISTICS AND TRANSPORT NETWORKS</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES DISTRIBUTION NETWORKS</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title=" Agristores-technologies/Agripay">
                             <h2>AGRITRAVEL</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRIMATT</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES FOUNDATION</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRINOW</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES PROP SHIPPING</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRIWORK</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES HEALTH APP</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES GREEEN ENERGY SOLUTIONS</h2>
                         </center>
                     </div>
-                    <div class="card" onclick="alert('subsidiary service')">
+                    <div class="card factualCards" onclick="alert('subsidiary service')">
                         <center>
                             <img src="git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
                             <h2>AGRISTORES SMART FORMS</h2>
@@ -212,7 +318,7 @@
                 <div class="card_container flex_stuff horiz">
                     <div class="card" onclick="alert('subsidiary service')">
                         <h2>VEGETABLE</h2>
-                        <img class="img_stuff" src="./vegetables.png" alt="profile" width="200" height="200">
+                        <img class="img_stuff" src="./vegetables.png" alt="profile" width="200" height="200" align="center">
                         <p>MODERN</p>
                     </div>
                     <div class="card" onclick="alert('subsidiary service')">

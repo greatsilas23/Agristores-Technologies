@@ -15,6 +15,7 @@ let itemPrice = myAddForm.itemPrice
 let searchItem = searchNewItems.searchItem
 let popupIsShowing = false
 let itemsAvailable = new Array()
+let visibleForm
 //operational methods
 function addItem(){
 	event.preventDefault()
@@ -81,6 +82,7 @@ function showSubsidiary(e){
 		opaqueBackground.style.display = "block"
 		subsidiaryForm.style.display = "block"
 		popupIsShowing = true
+		visibleForm = subsidiaryForm
 	} else {
 
 	}
@@ -88,7 +90,7 @@ function showSubsidiary(e){
 function hidePopup(){
 	if(popupIsShowing){
 		opaqueBackground.style.display = "none"
-		collectDataForm.style.display = "none"
+		visibleForm.style.display = "none"
 		popupIsShowing = false
 	} else {
 
