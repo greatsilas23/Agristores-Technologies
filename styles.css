@@ -157,7 +157,7 @@ body
     height: calc(400px - 50px);
     width: calc(97.5vw - 40px);
     margin: auto;
-    background-image: url("./img_reach_us.jpg");
+    background-image: url("./img/img_reach_us.jpg");
     background-size: cover;
     color: grey;
 }
@@ -233,83 +233,83 @@ body
     width: 97.5vw;
 }
 .addBorderRadius
-                {
-                    border-radius: 20px;
-                }
-                .changeColor
-                {
-                    filter: invert(100%);
-                }
-                .moveLeft
-                {
-                    position: absolute;
-                    top: 15px;
-                    left: 5vw;
-                }
-                .moveRight
-                {
-                    position: absolute;
-                    top: 15px;
-                    left: 70vw;
-                }
-                .moveRightMore
-                {
-                    position: absolute;
-                    top: 15px;
-                    left: 75vw;
-                }
-                .moveIntoSearch
-                {
-                    position: absolute;
-                    top: 15px;
-                    left: 84vw;
-                }
-                .moveRightMost
-                {
-                    position: absolute;
-                    top: 15px;
-                    left: 90vw;
-                }
-                .underlineStuff:hover
-                {
-                    border-bottom: solid 4px white;
-                }
-                .defaultUnderline
-                {
-                    border-bottom: solid 4px white;
-                }
-                .myTopLinks
-                {
-                    height: 45px;
-                    width: 80px;
-                }
-                .mySearchBar
-                {
-                    height: 26px;
-                    width: 140px;
-                    outline: none;
-                    border: none;
-                }
-                .hideOverflow
-                {
-                    overflow: hidden;
-                }
-                .stickyDiv
-                {
-                    width: 100vw;
-                    height: 60px;
-                    position: fixed;
-                    top: 0px;
-                    left: 0px;
-                    /*background-color: #9bbe83;*/
-                    background-color: #060;
-                    z-index: 3;
-                }
-                .positionAtTop
-                {
-                    position: relative;
-                    height: 40px;
-                    width: 40vw;
-                    top: -240px;
-                    left: 0vw ;
-                }
+{
+    border-radius: 20px;
+}
+.changeColor
+{
+    filter: invert(100%);
+}
+.moveLeft
+{
+    position: absolute;
+    top: 15px;
+    left: 5vw;
+}
+.moveRight
+{
+    position: absolute;
+    top: 15px;
+    left: 70vw;
+}
+.moveRightMore
+{
+    position: absolute;
+    top: 15px;
+    left: 75vw;
+}
+.moveIntoSearch
+{
+    position: absolute;
+    top: 15px;
+    left: 84vw;
+}
+.moveRightMost
+{
+    position: absolute;
+    top: 15px;
+    left: 90vw;
+}
+.underlineStuff:hover
+{
+    border-bottom: solid 4px white;
+}
+.defaultUnderline
+{
+    border-bottom: solid 4px white;
+}
+.myTopLinks
+{
+    height: 45px;
+    width: 80px;
+}
+.mySearchBar
+{
+    height: 26px;
+    width: 140px;
+    outline: none;
+    border: none;
+}
+.hideOverflow
+{
+    overflow: hidden;
+}
+.stickyDiv
+{
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /*background-color: #9bbe83;*/
+    background-color: #060;
+    z-index: 3;
+}
+.positionAtTop
+{
+    position: relative;
+    height: 40px;
+    width: 40vw;
+    top: -240px;
+    left: 0vw ;
+}
