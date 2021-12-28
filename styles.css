@@ -19,7 +19,7 @@ body
     height: 700px; 
     width: 97.5vw; 
     margin: auto;
-    background-image: url("./img_background.jpg");
+    background-image: url("./img/img_background.jpg");
     background-size: cover;
     color: white;   
 }
