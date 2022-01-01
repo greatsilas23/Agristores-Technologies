@@ -1,430 +1,461 @@
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <title>Agristores</title>
-            <link rel="icon" class="addBorderRadius" href="./img/icon.png">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="Web site created to allow trade of vehicles">
-            <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body onload="showItem()">
-            <!--DIV: MAIN DIV HOLDING ALL OTHER DIVS-->
-            <div class="top_root_element">
-                <!-- DIV: HIDDEN BLUR BACKGROUND FOR POPUPS-->
-                <div id="opaqueBackground" class="opaqueBackground hide_stuff" onclick="hidePopup()">
-                </div>
-                <!--DIV: COMPANY SLOGAN-->
-                <div class="main_background">
-                    <div class="container">
-                        <center>
-                            <div class="navigationContainer stickyDiv flex_stuff horiz spaceEven">
-                                <div class="myTopLinks moveLeft" onclick=""> 
-                                    <img class="changeColor" src="./img/menu.png" width="26" height="26" alt="menu">
-                                </div>
-                               <!--  <div class="myTopLinks moveRight">
-                                    <img class="changeColor" src="./img/messages.png" width="26" height="26" alt="messages">
-                                </div>
-                                <div class="moveRightMore">
-                                    <input type="text" class="mySearchBar addBorderRadius">
-                                </div>
-                                <div class="moveIntoSearch">
-                                    <img src="./img/search.png" width="26" height="26" alt="search">
-                                </div>
-                                <div class="moveRightMost changeColor addBorderRadius hideOverflow">
-                                    <img src="./img/git.png" width="26" height="26" alt="search">
-                                </div> -->
-                            </div>
-                            <div class="portfolio_text">
-                                <div class="flex_stuff horiz positionAtTop spaceEven">
-                                    <div class="myTopLinks underlineStuff defaultUnderline" onclick=""><h3>Portfolio</h3></div>
-                                    <div class="myTopLinks underlineStuff" onclick=""><h3>About</h3></div>
-                                    <div class="myTopLinks underlineStuff" onclick=""><h3>Values</h3></div>
-                                    <div class="myTopLinks underlineStuff" onclick=""><h3>Excutives</h3></div>
-                                </div>
-                                <img src="./img/icon.png" width="70" height="70" alt="icon">
-                                <h2>YOUR PORTFOLIO</h2>
-                                <h2>"EVERY PHOTO TELLS A STORY"</h2>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-                <!--DIV: ABOUT US-->
-                <div name="mySubsidiaries" class="welcome_section flex_stuff horiz">
-                    <div>
-                        <h2>SUBSIDIARIES OF AGRISTORES</h2>
-                    </div>
-                    <div>
-                        <button class="myAddBn" onclick="showSubsidiary(this)">ADD</button>
-                    </div>
-                </div>
-                <div id="mySubsidiaries" class="card_container flex_stuff horiz">
-                    <div class="card factualCards" onclick="alert('subsidiary service')" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRIPAY</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agrinews" title="Agristores-technologies/Agrinews">
-                            <h2>AGRINEWS</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES WAREHOUSES</h2>  
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES DIGITAL & INFO. PLATFORMS</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES LOGISTICS AND TRANSPORT NETWORKS</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES DISTRIBUTION NETWORKS</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title=" Agristores-technologies/Agripay">
-                            <h2>AGRITRAVEL</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRIMATT</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES FOUNDATION</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRINOW</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES PROP SHIPPING</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRIWORK</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES HEALTH APP</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES GREEEN ENERGY SOLUTIONS</h2>
-                        </center>
-                    </div>
-                    <div class="card factualCards" onclick="alert('subsidiary service')">
-                        <center>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                            <h2>AGRISTORES SMART FORMS</h2>
-                        </center>
-                    </div>
-                </div>
-                <!--DIV: A SECTION SHOWING MANAGEMENT BRANCHES-->
-                <div class="welcome_section flex_stuff horiz">
-                    <div>
-                        <h2>DEPARTMENTS</h2>
-                    </div>
-                    <div>
-                        <button class="myAddBn" onclick="showPopup()">ADD</button>
-                    </div>
-                </div>
-                <div class="card_container flex_stuff horiz">   
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <center>
-                            <h2>CCO</h2>
-                            <img class="img_stuff" src="./img/cco.jpg" alt="profile" width="200" height="200">
-                        </center>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <center>
-                            <h2>CIO</h2>
-                            <img class="img_stuff" src="./img/cio.jpg" alt="profile" width="200" height="200">
-                        </center>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <center>
-                            <h2>CEO</h2>
-                            <img class="img_stuff" src="./img/ceo_blair.jpg" alt="profile" width="200" height="200">
-                        </center>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <center>
-                            <h2>COO</h2>
-                            <img class="img_stuff" src="./img/coo.jpeg" alt="profile" width="200" height="200">
-                        </div>
-                        </center>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <center>
-                            <h2>CTO</h2>
-                            <img class="img_stuff" src="./img/cto.jpg" alt="profile" width="200" height="200">
-                        </center>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <center>
-                            <h2>CRO</h2>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                        </div>
-                        </center>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <center>
-                            <h2>CFO</h2>
-                            <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
-                        </div>
-                        </center>
-                </div>
-                <!--DIV: SEPARATE SECTIONS OF THE PAGE-->
-                <div class="welcome_section flex_stuff horiz">
-                    <!--DIV: HIDDEN FORMS-->
-                    <!--DIV: HIDDEN FORM TO ADD USERS-->
-                    <div id="myAddForm" class="myAddForm hide_stuff">
-                        <center>
-                            <h2>ADD ITEM</h2>
-                            <form name="myAddForm" onsubmit="addItem()">
-                                <label>Item Name:</label>
-                                <input name="itemName" placeholder="Example: Wheelbarrow"><br>
-                                <label>Item Price:</label>
-                                <input name="itemPrice" placeholder="Example: Ksh. 50,000"><br>
-                                <input type="submit">
-                            </form>
-                        </center>
-                    </div>
-                    <!--DIV: HIDDEN FORM TO ADD SUBSIDIARIES-->
-                    <div id="mySubsidiaryForm" class="myAddForm hide_stuff">
-                        <center>
-                            <h2>ADD SUBSIDIARY</h2>
-                            <form name="myAddForm" onsubmit="addItem()">
-                                <label>Subsidiary Name:</label>
-                                <input name="itemName" placeholder="Example: Wheelbarrow"><br>
-                                <hr>
-                                <label>Executive Owner:</label>
-                                <select>
-                                    <option selected>CCO</option>
-                                    <option >CIO</option>
-                                    <option >CEO</option>
-                                    <option >COO</option>
-                                    <option >CTO</option>
-                                    <option >CRO</option>
-                                    <option >CFO</option>
-                                    <option >CS</option>
-                                </select><br>
-                                <hr>
-                                <input type="submit">
-                            </form>
-                        </center>
-                    </div>
-                    <div>
-                        <h2>ITEMS IN OUR GALLERY</h2>
-                    </div>
-                    <div>
-                        <button class="myAddBn" onclick="showPopup()">ADD</button>
-                    </div>
-                </div>
-                <!--DIV: SHOW GLIMPSE OF ITEMS AVAILABLE-->
-                <div class="card_container flex_stuff horiz">
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>VEGETABLE</h2>
-                        <img class="img_stuff" src="./img/vegetables.png" alt="profile" width="200" height="200" align="center">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>FRUITS</h2>
-                        <img class="img_stuff" src="./img/fruits.png" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>BEVERAGES</h2>
-                        <img class="img_stuff" src="./img/beverages.png" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>LIVE TREES & PLANTS</h2>
-                        <img class="img_stuff" src="./img/live_plants.jpeg" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>ANIMAL PRODUCTS</h2>
-                        <img class="img_stuff" src="./img/animal_products.jpeg" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>FLORICULTURE AND CUT FLOWERS</h2>
-                        <img class="img_stuff" src="./img/flowers.png" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>CEREALS</h2>
-                        <img class="img_stuff" src="./img/cereals.png" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>ROOT CROPS</h2>
-                        <img class="img_stuff" src="./img/root_crops.jpeg" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>LEGUMES</h2>
-                        <img class="img_stuff" src="./img/legumes.png" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>CLOTHING ACCESSORIES</h2>
-                        <img class="img_stuff" src="./img/clothes.png" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>SPICES</h2>
-                        <img class="img_stuff" src="./img/spices.png" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <h2>OIL AND OIL PRODUCTS</h2>
-                        <img class="img_stuff" src="./img/oil_products.png" alt="profile" width="200" height="200">
-                        <p>MODERN</p>
-                    </div>
-                </div>
-                <!-- <div class="separator_element">
-                    <h2>SEARCH FOR AN ITEM</h2>
-                </div>
-                <div class="tabbed_menu_container flex_stuff center_stuff">
-                    <div id="tabbed_menu">
-                        <div class="btns">
-                            <button id="default_open" class="tablink default_open">USED</button>
-                            <button class="tablink">NEW</button>
-                            <button class="tablink">IMPOR</button>
-                        </div>
-                        <div id="used" class="tabcontent flex_stuff center_stuff vertic">
-                            <form name="searchNewItems">
-                                <label>Name</label>
-                                <input name="searchItem" placeholder="Example: Wheelbarrow">
-                                <label>Price</label>
-                                <select>
-                                    <option><label>Below Ksh. 50,000</label></option>
-                                    <option><label>Ksh. 50,000</label></option>
-                                    <option><label>Above Ksh. 50,000</label></option>
-                                </select>
-                                <button>SEARCH</button>
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
-                
-                <div class="separator_element">
-                    <h2>VIEW AVAILABLE ITEMS</h2>
-                </div>
-                <div class="tabbed_menu_container flex_stuff center_stuff horiz">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8">
+        <title>Agristores</title>
+        <link rel="icon" class="addBorderRadius" href="./img/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Web site created to allow online e-commerce">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="navigationContainer stickyDiv flex_stuff horiz spaceEven">
+            <div class="myTopLinks moveLeft" >
+                <img class="changeColor" src="./img/menu.png" width="26" height="26" alt="menu">
+            </div>
+            <div class="pageLinksContainer flex_stuff horiz spaceEven">
+                <div class="myTopLinks" ><h3 class="flex_stuff center_stuff">HOME</h3></div>
+                <div class="myTopLinks" ><h3 class="flex_stuff center_stuff">ABOUT</h3></div>
+                <div class="myTopLinks" ><h3 class="flex_stuff center_stuff">FEEDBACK</h3></div>
+            </div>
+        </div>
+        <div class="main_background">
+            <div class="portfolioText">
+                <center>
+                    <h1>AGRSITORES TECHNOLOGIES</h1>
+                    <img src="./img/icon.png" width="70" height="70" alt="icon">
+                </center>
+            </div>
+        </div>
+        <div class="welcome_section flex_stuff center_stuff">
+            <h2>ABOUT</h2>
+        </div>
+        <div class="separator_element">
+            <center>
+                <h2> Agristores-technologies &copy; is an upcoming online vending service that connects our clients with agriculture suppliers from allover the world</h2>
+            </center>
+        </div>
+        <div class="welcome_section flex_stuff center_stuff">
+            <h2>DIVERSIFICATION</h2>
+        </div>
+        <div class="mySubsidiaries card_container flex_stuff horiz">
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRIPAY</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agrinews" title="Agristores-technologies/Agrinews">
+                    <h2>AGRINEWS</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES WAREHOUSES</h2>
+                </center>
+            </div>
+            <div class="card factualCards">
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES DIGITAL & INFO. PLATFORMS</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES LOGISTICS AND TRANSPORT NETWORKS</h2>
+                </center>
+            </div>
+            <div class="card factualCards">
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES DISTRIBUTION NETWORKS</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title=" Agristores-technologies/Agripay">
+                    <h2>AGRITRAVEL</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRIMATT</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES FOUNDATION</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRINOW</h2>
+                </center>
+            </div>
+            <div class="card factualCards">
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES PROP SHIPPING</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRIWORK</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES HEALTH APP</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES GREEEN ENERGY SOLUTIONS</h2>
+                </center>
+            </div>
+            <div class="card factualCards" >
+                <center>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                    <h2>AGRISTORES SMART FORMS</h2>
+                </center>
+            </div>
+        </div>
+        <div class="welcome_section flex_stuff center_stuff">
+            <h2>DEPARTMENTS</h2>
+        </div>
+        <div class="card_container flex_stuff horiz">
+            <div class="card" >
+                <center>
+                    <h2>CCO</h2>
+                    <img class="img_stuff" src="./img/cco.jpg" alt="profile" width="200" height="200">
+                </center>
+            </div>
+            <div class="card" >
+                <center>
+                    <h2>CIO</h2>
+                    <img class="img_stuff" src="./img/cio.jpg" alt="profile" width="200" height="200">
+                </center>
+            </div>
+            <div class="card" >
+                <center>
+                    <h2>CEO</h2>
+                    <img class="img_stuff" src="./img/ceo_blair.jpg" alt="profile" width="200" height="200">
+                </center>
+            </div>
+            <div class="card" >
+                <center>
+                    <h2>COO</h2>
+                    <img class="img_stuff" src="./img/coo.jpeg" alt="profile" width="200" height="200">
+                </center>
+            </div>
+            <div class="card" >
+                <center>
+                    <h2>CTO</h2>
+                    <img class="img_stuff" src="./img/cto.jpg" alt="profile" width="200" height="200">
+                </center>
+            </div>
+            <div class="card">
+                <center>
+                    <h2>CRO</h2>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                </center>
+            </div>
+            <div class="card" >
+                <center>
+                    <h2>CFO</h2>
+                    <img src="./img/git.png" width="80" height="80" alt="agripay" title="Agristores-technologies/Agripay">
+                </center>
+            </div>
+        </div>
+        <div class="welcome_section flex_stuff center_stuff">
+            <h2>FEATURED</h2>
+        </div>
+        <div class="card_container flex_stuff horiz">
+            <div class="card" >
+                <h2>VEGETABLE</h2>
+                <img class="img_stuff" src="./img/vegetables.png" alt="profile" width="200" height="200" align="center">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>FRUITS</h2>
+                <img class="img_stuff" src="./img/fruits.png" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>BEVERAGES</h2>
+                <img class="img_stuff" src="./img/beverages.png" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>LIVE TREES & PLANTS</h2>
+                <img class="img_stuff" src="./img/live_plants.jpeg" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>ANIMAL PRODUCTS</h2>
+                <img class="img_stuff" src="./img/animal_products.jpeg" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>FLORICULTURE AND CUT FLOWERS</h2>
+                <img class="img_stuff" src="./img/flowers.png" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>CEREALS</h2>
+                <img class="img_stuff" src="./img/cereals.png" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>ROOT CROPS</h2>
+                <img class="img_stuff" src="./img/root_crops.jpeg" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>LEGUMES</h2>
+                <img class="img_stuff" src="./img/legumes.png" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>CLOTHING ACCESSORIES</h2>
+                <img class="img_stuff" src="./img/clothes.png" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>SPICES</h2>
+                <img class="img_stuff" src="./img/spices.png" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+            <div class="card" >
+                <h2>OIL AND OIL PRODUCTS</h2>
+                <img class="img_stuff" src="./img/oil_products.png" alt="profile" width="200" height="200">
+                <p>MODERN</p>
+            </div>
+        </div>
+        <div class="welcome_section flex_stuff center_stuff">
+            <h2>FORMS</h2>
+        </div>
+        <div class="tabbed_menu_container flex_stuff center_stuff horiz">
+            <div class="execFrm addBorderRadius">
+                <center>
+                    <h3>EXECUTIVE</h3>
+                </center>
+                <hr>
+                <form>
                     <center>
-                        <div class="card" style="min-width: auto; max-width: 60vw; " onclick="alert('subsidiary service')">
-                            <table id="myTbl" class="myTbl">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>NAME</th>
-                                    <th>POST</th>
-                                    <td>DESCRIPTION</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>STELLA</td>
-                                    <td>CCO</td>
-                                    <td>CHIEF COORDINATION OFFICER</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>NJOKI</td>
-                                    <td>CIO</td>
-                                    <td>CHIEF INTERNAL OFFICER</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>BLAIR</td>
-                                    <td>CEO</td>
-                                    <td>CHIEF EXECUTIVE OFFICER</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>JOSHUA</td>
-                                    <td>COO</td>
-                                    <td>CHIEF OPERATIONS OFFICER</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>SILAS</td>
-                                    <td>CTO</td>
-                                    <td>CHIEF TECHNOLOGY OFFICER</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>EUNICE</td>
-                                    <td>CRO</td>
-                                    <td>CHIEF RELATIONS OFFICER</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>SOILAH</td>
-                                    <td>CFO</td>
-                                    <td>CHIEF FINANCIAL OFFICER</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>JASON</td>
-                                    <td>CS</td>
-                                    <td>COMPANY SECRETARY</td>
-                                </tr>
-                            </table>
-                        </div>
+                        <input type="text" placeholder="ID"><br>
+                        <input type="text" placeholder="NAME"><br>
+                        <input type="text" placeholder="POST"><br>
+                        <input type="submit"><input type="reset">
                     </center>
+                </form>
+            </div>
+            <div class="featureFrm addBorderRadius">
+                <center>
+                    <h3>FEATURE</h3>
+                </center>
+                <hr>
+                <form>
+                    <center>
+                        <input type="text" placeholder="ID"><br>
+                        <input type="text" placeholder="FEATURE"><br>
+                        <input type="submit"><input type="reset">
+                    </center>
+                </form>
+            </div>
+            <div class="subsidiaryFrm addBorderRadius">
+                <center>
+                    <h3>SUBSIDIARY</h3>
+                </center>
+                <hr>
+                <form>
+                    <center>
+                        <input type="text" placeholder="ID"><br>
+                        <input type="text" placeholder="SUBSIDIARY"><br>
+                        <input type="submit"><input type="reset">
+                    </center>
+                </form>
+            </div>
+        </div>
+        <div class="welcome_section flex_stuff center_stuff">
+            <h2>RECORDS</h2>
+        </div>
+        <div class="tabbed_menu_container flex_stuff center_stuff horiz">
+            <div class="myTblDiv"  >
+                <table class="myTbl execTbl">
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>POST</th>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>STELLA</td>
+                        <td>CCO</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>NJOKI</td>
+                        <td>CIO</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>BLAIR</td>
+                        <td>CEO</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>JOSHUA</td>
+                        <td>COO</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>SILAS</td>
+                        <td>CTO</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>EUNICE</td>
+                        <td>CRO</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>SOILAH</td>
+                        <td>CFO</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>JASON</td>
+                        <td>CS</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="myTblDiv" >
+                <table class="myTbl featuredTbl" >
+                    <tr>
+                        <th>ID</th>
+                        <th>FEATURE</th>
+                        <th>COUNT</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>VEGETABLES</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>FRUITS</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>BEVERAGES</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>LIVE TREES & PLANTS</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>ANIMAL PRODUCTS</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>FLORICULTURE & CUT FLOWERS </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>CEREALS</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>ROOT CROPS</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="myTblDiv"  >
+                <table class="myTbl subsidiariesTbl">
+                    <tr>
+                        <th>ID</th>
+                        <th>SUBSIDIARY</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>AGRIPAY</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>AGRINEWS</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>AGRISTORES WAREHOUSES</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>AGRISTORES DIGITAL & INFO. PLATTFORMS</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>AGRISTORES LOGISTICS & TRANSPORT NETWORKS</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>AGRISTORES DISTRIBUTED NETWORKS</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>AGRITRAVEL</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>AGRIMATT</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="separator_element">
+            <center>
+                <h2>FEEDBACK</h2>
+            </center>
+        </div>
+        <div class="contact_support flex_stuff center_stuff" >
+            <div class="socialsContainer flex_stuff horiz spaceEven">
+                <div class=" instagramCard" >
+                    <img src="./img/instagram.png" width="150" height="140" alt="" title="@silas.n_">
                 </div>
-                <div class="separator_element">
-                    <h2>REACH US ON SOCIAL MEDIA</h2>
+                <div class=" facebookCard" >
+                    <img src="./img/facebook.png" width="180" height="140" alt="" title="@silas.dopelimitlesity">
                 </div>
-                <div class="contact_support flex_stuff horiz center_stuff" onclick="location.href='https://www.instagram.com/silas.n_/'">
-                    <div class="card" onclick="alert('subsidiary service')">
-                        <img src="./img/instagram.png" width="150" height="150" alt="">
-                        <div id="gram">
-                            <h3>@silas.n_</h3>
-                        </div>
-                    </div>
-                    <div id="details_card" class="card" onclick="location.href='https://https://web.facebook.com/silas.dopelimitlesity'">
-                        <img src="./img/facebook.png" width="200" height="150" alt="">
-                        <div id="gram">
-                            <h3>@Silas Nyamwange</h3>
-                        </div>
-                    </div>
+                <div class=" githubCard" >
+                    <img src="./img/git.png" width="120" height="125" alt="" title="@greatsilas23">
                 </div>
-                <div class="flex_stuff center_stuff">
-                    <h2>greatsilas23 &copy; 2021</h2>
+                <div class=" linkedInCard" >
+                    <img src="./img/in.png" width="120" height="125" alt="" title="@silas-nyamwange-042761228">
                 </div>
             </div>
-        </body>
-        <script src="./script.js"></script>
-    </html>
+        </div>
+        <div class="companyInfo flex_stuff center_stuff">
+            <h2>greatsilas23 &copy; 2021</h2>
+        </div>
+    </body>
+    <script src="./script.js"></script>
+    <script src="./app.js"></script>
+</html>
