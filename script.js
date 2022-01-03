@@ -86,3 +86,12 @@ console.log(`script.js loaded`)
 //
 //	}
 //}
+
+//const homeLink = document.getElementsByClassName("homeLink")[0]
+//console.log(homeLink)
+//console.log(`${document.getElementsByClassName("homeLink")[0]} found`)
+//const homeLinkPhone = "<img src=\"./img/git.png\" width=\"20\" height=\"20\" alt=\"git\" >"
+//console.log(`${homeLinkPhone} will be placed`)
+//if(homeLink.style.backgroundColor === "red") {
+//    homeLink.innerHTML = homeLink.innerHTML
+//}
