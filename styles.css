@@ -59,6 +59,7 @@
     align-items: center;
     color: #060;
 }
+
 .tabbed_menu_container
 {
     height: 80vh;
@@ -67,7 +68,14 @@
     overflow-x: scroll;
     padding: 10px;
 }
-
+.rightFloat
+{
+    margin-left: 60vw;
+}
+.leftFloat
+{
+    float: left;
+}
 .badgeContent
 {
     position: relative;
@@ -355,6 +363,53 @@
     left: 8px;
     z-index: 3;
 }
+.loginFrm
+{
+    width: 60vw;
+    position: fixed;
+    top: 148px;
+    left: 23vw;
+    z-index: 3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.registerFrm
+{
+    width: 60vw;
+    position: fixed;
+    top: 148px;
+    left: 23vw;
+    z-index: 3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.accessTabContent
+{
+    width: 60vw;
+    height: 85vh;
+}
+.forgotPassInput
+{
+    width: 35vw;
+}
+
+
+.usrLogin
+{
+    width: (90vw - 10vw);
+    height: auto;
+    background-color: white;
+    padding: 5vw;
+    margin: auto;
+}
+.usrRegister
+{
+    width: (90vw - 10vw);
+    height: auto;
+    background-color: white;
+    padding: 5vw;
+    margin: auto;
+}
 .opaqueBg
 {
     width: 98vw;
@@ -364,6 +419,28 @@
     left: 8px;
     z-index: 2;
     background-color: rgb(5, 5, 5, 0.5)
+}
+.accessTablinks
+{
+    width: 60vw;
+    height: 60px;
+    position: fixed;
+    top: 88px;
+    left: 23vw;
+    z-index: 3;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.loginTablink
+{
+    width: calc(60vw / 2);
+    height: 60px;
+}
+.registerTablink
+{
+    width: calc(60vw / 2);
+    height: 60px;
 }
 .navigationContainer
 {

@@ -10,17 +10,66 @@
     </head>
     <body>
         <div class="navigationContainer stickyDiv flex_stuff horiz spaceEven">
-            <div class="myTopLinks moveLeft sideBarToggle" >
+            <div class="myTopLinks moveLeft sideBarToggle leftFloat" >
                 <img class="changeColor" src="./img/menu.png" width="26" height="26" alt="menu">
             </div>
-            <div class="pageLinksContainer flex_stuff horiz spaceEven">
-                <div class="myTopLinks homeLink" ><h3 class="flex_stuff center_stuff hide_stuff">HOME</h3></div>
-                <div class="myTopLinks aboutLink" ><h3 class="flex_stuff center_stuff hide_stuff">ABOUT</h3></div>
-                <div class="myTopLinks feedbackLink" ><h3 class="flex_stuff center_stuff hide_stuff">FEEDBACK</h3></div>
+            <div class="pageLinksContainer flex_stuff center_stuff horiz spaceEven rightFloat">
+                <div class="loginFrmToggle">
+                    <img class="addBorderRadius " src="./img/logIn.jpeg" width="35" height="35" alt="agripay" title="HOME">
+                </div>
+                <img class="changeColor" src="./img/cart.jpg" width="35" height="35" alt="icon">
             </div>
         </div>
+        <!-- HIDDEN DIVS START-->
+        <!-- 1. OPAQUE BACKGROUND -->
         <div class="opaqueBg hide_stuff">
         </div>
+        <!-- 2. LOGIN/REGISTER FORM -->
+        <div class="accessTablinks flex_stuff horiz whiteColor hide_stuff">
+            <div class="loginTablink flex_stuff center_stuff">
+                <img class="addBorderRadius" src="./img/IconShowLogin.png" width="40" height="40" alt="icon">
+            </div>
+            <div class="registerTablink flex_stuff center_stuff">
+                <img  src="./img/IconShowSignup.png" width="40" height="40" alt="icon">
+            </div>
+        </div>
+        <div class="accessTabContents flex_stuff center_stuff hide_stuff hideOverflow">
+            <div class="loginFrm hideOverflow whiteColor hide_stuff">
+                <form class="usrLogin">
+                    <label >Id</label><br>
+                    <input class="execInput addBorderRadius featureIdInput"  type="text" placeholder="ID002" required><br>
+                    <label >Password</label><br>
+                    <input class="execInput addBorderRadius featureIdInput"  type="password" placeholder="******" required><br>
+
+                    <input class="execSubmit addBorderRadius" type="submit" value="Log In">
+
+                </form>
+            </div>
+            <div class="registerFrm hideOverflow whiteColor hide_stuff">
+                <form class="usrRegister">
+                    <label >Name</label><br>
+                    <input class="execInput addBorderRadius featureIdInput"  type="text" placeholder="ID002" required><br>
+                    <label >Password</label><br>
+                    <input class="execInput addBorderRadius featureIdInput"  type="password" placeholder="******" required><br>
+                    <input class="execSubmit addBorderRadius" type="submit" value="Sign Up">
+                    <div class="socialsContainer flex_stuff center_stuff spaceEven">
+                        <div class=" instagramCard" >
+                            <img src="./img/instagram.png" width="30" height="30" alt="" title="@silas.n_">
+                        </div>
+                        <div class=" facebookCard" >
+                            <img src="./img/facebook.png" width="30" height="30" alt="" title="@silas.dopelimitlesity">
+                        </div>
+                        <div class=" githubCard" >
+                            <img src="./img/git.png" width="30" height="30" alt="" title="@greatsilas23">
+                        </div>
+                        <div class=" linkedInCard" >
+                            <img src="./img/in.png" width="30" height="30" alt="" title="@silas-nyamwange-042761228">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- 3. SIDEBAR -->
         <div class="flex_stuff vertic sideBar sidebarStickyDiv greenColor hide_stuff hideOverflow">
             <center>
                 <img class="changeColor" src="./img/icon.png" width="70" height="70" alt="icon">
@@ -42,6 +91,7 @@
                 </center>
             </div>
         </div>
+        <!--HIDDEN DIVS CLOSE-->
         <div class="main_background">
             <div class="portfolioText">
                 <center>

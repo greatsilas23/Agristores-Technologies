@@ -4,11 +4,17 @@
 */
 //variables
 let isSideBarShowing = false
+let isLoginFormShowing = false
 //constants
 //(i)form tablinks
 const execTablinkFrm = document.querySelector("div.execTablinkFrm")
 const featureTablinkFrm = document.querySelector("div.featureTablinkFrm")
 const subsidiaryTablinkFrm = document.querySelector("div.subsidiaryTablinkFrm")
+const accessTablinks = document.querySelector("div.accessTablinks")
+const accessTabContents = document.querySelector("div.accessTabContents")
+const loginTablink = document.querySelector("div.loginTablink")
+const registerTablink = document.querySelector("div.registerTablink")
+
 //(ii)form containers
 const execFrm = document.querySelector("div.execFrm")
 const featureFrm = document.querySelector("div.featureFrm")
@@ -17,6 +23,9 @@ const subsidiaryFrm = document.querySelector("div.subsidiaryFrm")
 const sideBarToggle = document.querySelector("div.sideBarToggle")
 const sideBar = document.querySelector("div.sideBar")
 const opaqueBg = document.querySelector("div.opaqueBg")
+const loginFrmToggle = document.querySelector("div.loginFrmToggle")
+const loginFrm = document.querySelector("div.loginFrm")
+const registerFrm = document.querySelector("div.registerFrm")
 //event listener methods
 //1. Exec form
 execTablinkFrm.addEventListener('click', function addGreenColor() {
@@ -106,6 +115,46 @@ sideBarToggle.addEventListener('click', function displaySideBar(){
         opaqueBg.classList.add("hide_stuff")
         isSideBarShowing = false
     }
+})
+//5. Login Form
+loginFrmToggle.addEventListener('click', function displayLoginForm(){
+    event.preventDefault()
+    if(!isLoginFormShowing){
+        if(!isLoggedIn){
+            loginTablink.click()
+        } else {
+            console.log(`already logged`)
+        }
+        opaqueBg.classList.remove("hide_stuff")
+        isLoginFormShowing = true
+    } else {
+        loginFrm.classList.add("hide_stuff")
+        accessTablinks.classList.add("hide_stuff")
+        opaqueBg.classList.add("hide_stuff")
+        isLoginFormShowing = false
+    }
+})
+//(i) Register Tablink of
+registerTablink.addEventListener('click', function showRegisterActions(){
+    accessTablinks.classList.remove("hide_stuff")
+    accessTabContents.classList.remove("hide_stuff")
+    registerTablink.classList.remove("whiteColor")
+    registerTablink.classList.add("greenColor", "colorWhiteText")
+    registerFrm.classList.remove("hide_stuff")
+    loginTablink.classList.remove("greenColor", "colorWhiteText")
+    loginTablink.classList.add("whiteColor")
+    loginFrm.classList.add("hide_stuff")
+})
+//(ii) Login Tablink of
+loginTablink.addEventListener('click', function showLoginActions(){
+    accessTablinks.classList.remove("hide_stuff")
+    accessTabContents.classList.remove("hide_stuff")
+    loginTablink.classList.remove("whiteColor")
+    loginTablink.classList.add("greenColor", "colorWhiteText")
+    loginFrm.classList.remove("hide_stuff")
+    registerTablink.classList.remove("greenColor", "colorWhiteText")
+    registerTablink.classList.add("whiteColor")
+    registerFrm.classList.add("hide_stuff")
 })
 execTablinkFrm.click()
 console.log(`script.js loaded`)

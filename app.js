@@ -10,6 +10,7 @@ const subsidiariesTbl = document.querySelector("div.subsidiariesTbl")
 //(ii)reports
 
 //variables
+let isLoggedIn = false
 //executive form array with getter: getMyExec
 let myExec = new Array()
 //executive form array with getter: getMyExec
@@ -34,6 +35,7 @@ function getMySubsidiaries(){
         mySubsidiaries = JSON.parse(strSubsidiaries)
 }
 //event listener methods
+//1. Executive form
 execFrm.addEventListener('submit', function getExecInput(){
     event.preventDefault()
     console.log(`validating exec frm`)
@@ -51,6 +53,7 @@ execFrm.addEventListener('submit', function getExecInput(){
         console.log(execFrm.children[2].children[2].value)
     }
 })
+//2. Feature form
 featureFrm.addEventListener('submit', function getFeatureInput(){
     event.preventDefault()
     console.log(`validating feature frm`)
@@ -65,6 +68,7 @@ featureFrm.addEventListener('submit', function getFeatureInput(){
         alert(`invalid form`)
     }
 })
+//3. Subsidiary form
 subsidiaryFrm.addEventListener('submit', function getSubsidiaryInput(){
     event.preventDefault()
     console.log(`validating subsidiary frm`)
@@ -79,5 +83,33 @@ subsidiaryFrm.addEventListener('submit', function getSubsidiaryInput(){
         alert(`invalid form`)
     }
 })
+//3. Login form
+loginFrm.addEventListener('submit', function getLoginInput(){
+    event.preventDefault()
+    console.log(`validating login frm`)
+    if(loginFrm.children[2].children[2].value !== ""){
+        getMyExec()
+        for(let i = 0; i <= myExec.length; i++){
+            if(loginFrm.children[2].children[2].value.toString() === "BLAIR" && loginFrm.children[2].children[6].value.toString() === "BLAIR"){
+                console.log(`user logged`)
+                loginFrm.classList.add("hide_stuff")
+                opaqueBg.classList.add("hide_stuff")
+                loginFrmToggle.innerHTML = "<img class=\"addBorderRadius\" src=\"./img/ceo_blair.jpg\" width=\"35\" height=\"35\" alt=\"icon\">"
+                isLoginFormShowing = false
+                isLoggedIn = true
+                break
+            } else {
+                console.log(`prompting user due to wrong credentials`)
+                alert(`wrong credentials`)
+                isLoggedIn = false
+                break
+            }
+        }
+    } else {
+        alert(`empty form`)
+        isLoggedIn = false
+    }
+})
+
 console.log(`app.js loaded`)
 
