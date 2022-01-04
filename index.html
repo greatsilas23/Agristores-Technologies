@@ -10,13 +10,36 @@
     </head>
     <body>
         <div class="navigationContainer stickyDiv flex_stuff horiz spaceEven">
-            <div class="myTopLinks moveLeft" >
+            <div class="myTopLinks moveLeft sideBarToggle" >
                 <img class="changeColor" src="./img/menu.png" width="26" height="26" alt="menu">
             </div>
             <div class="pageLinksContainer flex_stuff horiz spaceEven">
                 <div class="myTopLinks homeLink" ><h3 class="flex_stuff center_stuff hide_stuff">HOME</h3></div>
                 <div class="myTopLinks aboutLink" ><h3 class="flex_stuff center_stuff hide_stuff">ABOUT</h3></div>
                 <div class="myTopLinks feedbackLink" ><h3 class="flex_stuff center_stuff hide_stuff">FEEDBACK</h3></div>
+            </div>
+        </div>
+        <div class="opaqueBg hide_stuff">
+        </div>
+        <div class="flex_stuff vertic sideBar sidebarStickyDiv greenColor hide_stuff hideOverflow">
+            <center>
+                <img class="changeColor" src="./img/icon.png" width="70" height="70" alt="icon">
+            </center>
+            <div><hr></div>
+            <div class="homeLinkSideBar" >
+                <center>
+                    <img src="./img/git.png" width="50" height="50" alt="agripay" title="HOME">
+                </center>
+            </div>
+            <div class="aboutLinkSideBar" >
+                <center>
+                    <img src="./img/git.png" width="50" height="50" alt="agripay" title="ABOUT">
+                </center>
+            </div>
+            <div class="feedbackLinkSideBar" >
+                <center>
+                    <img src="./img/git.png" width="50" height="50" alt="agripay" title="FEEDBACK">
+                </center>
             </div>
         </div>
         <div class="main_background">
@@ -246,165 +269,80 @@
             <h2>FORMS</h2>
         </div>
         <div class="tablinkContainer flex_stuff horiz">
-            <div class="tablinkItem flex_stuff center_stuff ">EXECUTIVE</div>
-            <div class="tablinkItem flex_stuff center_stuff ">FEATURE</div>
-            <div class="tablinkItem flex_stuff center_stuff greenColor">SUBSIDIARY</div>
+            <div class="execTablinkFrm tablinkItem flex_stuff center_stuff whiteColor">EXECUTIVE</div>
+            <div class="featureTablinkFrm tablinkItem flex_stuff center_stuff whiteColor">FEATURE</div>
+            <div class="subsidiaryTablinkFrm tablinkItem flex_stuff center_stuff whiteColor">SUBSIDIARY</div>
         </div>
         <div class="tabbed_menu_container flex_stuff center_stuff">
             <div class="execFrm addBorderRadius hide_stuff">
                 <center>
+                    <img src="./img/icon.png" width="40" height="40" alt="icon">
                     <h3>EXECUTIVE</h3>
                 </center>
                 <hr>
-                <form>
-                    <center>
-                        <table class="execGrid">
-                            <tr>
-                                <td>
-                                    <label >ID</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="execInput addBorderRadius" type="text" placeholder="ID002">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label >Name</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="execInput addBorderRadius" type="text" placeholder="BLAIR">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label >Post</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select class="execInput addBorderRadius">
-                                        <option selected>CEO</option>
-                                        <option>CCO</option>
-                                        <option>CIO</option>
-                                        <option>COO</option>
-                                        <option>CTO</option>
-                                        <option>CRO</option>
-                                        <option>CFO</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="execSubmit addBorderRadius" type="submit" value="add">
-                                </td>
-                                <td>
-                                    <input class="execReset" type="reset" value="clear">
-                                </td>
-                            </tr>
-                        </table>
-                    </center>
+                <form class="execFrm">
+                    <label >Name</label><br>
+                    <input class="execInput addBorderRadius execNameInput" type="text" placeholder="BLAIR" required><br>
+                    <label >Post</label><br>
+                    <select class="execInput addBorderRadius execPostInput" >
+                        <option selected>CEO</option>
+                        <option>CCO</option>
+                        <option>CIO</option>
+                        <option>COO</option>
+                        <option>CTO</option>
+                        <option>CRO</option>
+                        <option>CFO</option>
+                    </select><br>
+                    <input class="execSubmit addBorderRadius" type="submit" value="add">
+                    <input class="execReset" type="reset" value="clear">
                 </form>
             </div>
-            <div class="execFrm addBorderRadius hide_stuff">
+            <div class="featureFrm addBorderRadius hide_stuff">
                 <center>
+                    <img src="./img/icon.png" width="40" height="40" alt="icon">
                     <h3>FEATURE</h3>
                 </center>
                 <hr>
-                <form>
-                    <center>
-                        <table class="execGrid">
-                            <tr>
-                                <td>
-                                    <label >ID</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="execInput addBorderRadius" type="text" placeholder="ID002">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label >FEATURE</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select class="execInput addBorderRadius">
-                                        <option selected>VEGETABLES</option>
-                                        <option>FRUITS</option>
-                                        <option>BEVERAGES</option>
-                                        <option>LIVE TREES & PLANTS</option>
-                                        <option>ANIMAL PRODUCTS</option>
-                                        <option>FLORICULTURE & CUT FLOWERS</option>
-                                        <option>CEREALS</option>
-                                        <option>ROOT CROPS</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="execSubmit addBorderRadius" type="submit" value="add">
-                                </td>
-                                <td>
-                                    <input class="execReset" type="reset" value="clear">
-                                </td>
-                            </tr>
-                        </table>
-                    </center>
+                <form class="featureFrm">
+                    <label >ID</label><br>
+                    <input class="execInput addBorderRadius featureIdInput"  type="text" placeholder="ID002" required><br>
+                    <label >FEATURE</label><br>
+                    <select class="execInput addBorderRadius featureFeatureInput" >
+                        <option selected>VEGETABLES</option>
+                        <option>FRUITS</option>
+                        <option>BEVERAGES</option>
+                        <option>LIVE TREES & PLANTS</option>
+                        <option>ANIMAL PRODUCTS</option>
+                        <option>FLORICULTURE & CUT FLOWERS</option>
+                        <option>CEREALS</option>
+                        <option>ROOT CROPS</option>
+                    </select><br>
+                    <input class="execSubmit addBorderRadius" type="submit" value="add">
+                    <input class="execReset" type="reset" value="clear">
                 </form>
             </div>
-            <div class="execFrm addBorderRadius">
+            <div class="subsidiaryFrm addBorderRadius hide_stuff">
                 <center>
+                    <img src="./img/icon.png" width="40" height="40" alt="icon">
                     <h3>SUBSIDIARY</h3>
                 </center>
                 <hr>
-                <form>
-                    <center>
-                        <table class="execGrid">
-                            <tr>
-                                <td>
-                                    <label >ID</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="execInput addBorderRadius" type="text" placeholder="ID002">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label >FEATURE</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select class="execInput addBorderRadius">
-                                        <option selected>AGRIPAY</option>
-                                        <option>AGRINEWS</option>
-                                        <option>AGRISTORES WAREHOUSES</option>
-                                        <option>AGRISTORES DIGITAL & INFO PLATFORMS</option>
-                                        <option>AGRISTORES LOGISTICS & TRANSPORT NETWORKS</option>
-                                        <option>AGRISTORES DISTRIBUTED NETWORKS</option>
-                                        <option>AGRITRAVEL</option>
-                                        <option>AGRIMATT</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="execSubmit addBorderRadius" type="submit" value="add">
-                                </td>
-                                <td>
-                                    <input class="execReset" type="reset" value="clear">
-                                </td>
-                            </tr>
-                        </table>
-                    </center>
+                <form class="subsidiaryFrm">
+                    <label >ID</label><br>
+                    <input class="execInput addBorderRadius subsidiaryIdInput"  type="text" placeholder="ID002" required><br>
+                    <label >SUBSIDIARY</label><br>
+                    <select class="execInput addBorderRadius subsidiarySubsidiaryInput" >
+                        <option selected>AGRIPAY</option>
+                        <option>AGRINEWS</option>
+                        <option>AGRISTORES WAREHOUSES</option>
+                        <option>AGRISTORES DIGITAL & INFO PLATFORMS</option>
+                        <option>AGRISTORES LOGISTICS & TRANSPORT NETWORKS</option>
+                        <option>AGRISTORES DISTRIBUTED NETWORKS</option>
+                        <option>AGRITRAVEL</option>
+                        <option>AGRIMATT</option>
+                    </select><br>
+                    <input class="execSubmit addBorderRadius" type="submit" value="add">
+                    <input class="execReset" type="reset" value="clear">
                 </form>
             </div>
         </div>
@@ -412,9 +350,9 @@
             <h2>RECORDS</h2>
         </div>
         <div class="tablinkContainer flex_stuff horiz">
-            <div class="tablinkItem flex_stuff center_stuff ">EXECUTIVE</div>
-            <div class="tablinkItem flex_stuff center_stuff ">FEATURE</div>
-            <div class="tablinkItem flex_stuff center_stuff greenColor">SUBSIDIARY</div>
+            <div class="execTablink tablinkItem flex_stuff center_stuff ">EXECUTIVE</div>
+            <div class="featureTablink tablinkItem flex_stuff center_stuff ">FEATURE</div>
+            <div class="subsidiaryTablink tablinkItem flex_stuff center_stuff greenColor">SUBSIDIARY</div>
         </div>
         <div class="tabbed_menu_container flex_stuff center_stuff">
             <div class="myTblDiv hide_stuff">
