@@ -100,6 +100,20 @@ export default class App extends Component {
 		this.setState({showFeedbacks: true})
 	}
   }
+
+  handleLoginAttempt = async () => {
+       try { 
+		await fetch('http://localhost:5432', this.state.about.then(response => {
+		response.json().then({
+			Alert.alert("Post create at:", data.this.state.about);)
+	})
+	}))
+	}
+	catch(error) {
+		console.error(`${error}`)
+	}
+       }).then()
+  }
   render(){
       return (
         <View

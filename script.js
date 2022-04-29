@@ -1,98 +1,160 @@
 /*
 	Date created: Sep 24, 2021 
-	Date modified: Nov 10, 2021 
+	Date modified: Jan 4, 2022
 */
-
-//constants
-const opaqueBackground = document.getElementById("opaqueBackground")
-const collectDataForm = document.getElementById("myAddForm")
-const subsidiaryForm = document.getElementById("mySubsidiaryForm")
-const resultTable = document.getElementById("myTbl")
 //variables
-let itemId = 0
-let itemName = myAddForm.itemName
-let itemPrice = myAddForm.itemPrice
-let searchItem = searchNewItems.searchItem
-let popupIsShowing = false
-let itemsAvailable = new Array()
-let visibleForm
-//operational methods
-function addItem(){
-	event.preventDefault()
-	hidePopup()
-	itemsAvailable.push({
-		idGiven: itemId++,
-		name: itemName,
-		price: itemPrice
-	})
-	setUpdates()
-}
-function removeItem(itemToRemove){
-	itemsAvailable.pop(itemToRemove)
-	setUpdates()
-}
-function showItem(){
-	getUpdates()
-	let totalRows = resultTable.rows.length
-	while(--totalRows)
-		resultTable.deleteRow(totalRows)
-	for(let i = 0; i < itemsAvailable.length; i++){
-		let newRow = resultTable.insertRow()
-		let cell1 = newRow.insertCell()
-		cell1.innerHTML = itemsAvailable[i].idGiven
-		let cell2 = newRow.insertCell()
-		cell2.innerHTML = itemsAvailable[i].name
-		let cell3 = newRow.insertCell()
-		cell3.innerHTML = itemsAvailable[i].price
-	}
-}
-function updateItem(){
+let isSideBarShowing = false
+let isLoginFormShowing = false
+//constants
+//(i)form tablinks
+const execTablinkFrm = document.querySelector("div.execTablinkFrm")
+const featureTablinkFrm = document.querySelector("div.featureTablinkFrm")
+const subsidiaryTablinkFrm = document.querySelector("div.subsidiaryTablinkFrm")
+const accessTablinks = document.querySelector("div.accessTablinks")
+const accessTabContents = document.querySelector("div.accessTabContents")
+const loginTablink = document.querySelector("div.loginTablink")
+const registerTablink = document.querySelector("div.registerTablink")
 
-}
-function getItem(){
-	for(let i = 0; i < itemsAvailable.length; i++){
-		if(searchItem.value == itemsAvailable[i].itemName)
-			return i
-		else
-			alert("Sorry, the item you searched for is not in our list of items")
-	}
-}
-
-//style methods
-function showPopup(e){
-	let thisItem = e.parentElement.parentElement.getAttribute("id")
-	const isUsingPopup = document.getElementById(thisItem)
-	//use scroll() to position popup and open page
-	window.scroll(isUsingPopup.style.top, isUsingPopup.style.left)
-	if(!popupIsShowing){
-		window.scroll(0, 0)
-		opaqueBackground.style.display = "block"
-		collectDataForm.style.display = "block"
-		popupIsShowing = true
-	} else {
-
-	}
-}
-function showSubsidiary(e){
-	let thisItem = e.parentElement.parentElement.getAttribute("name")
-	const isUsingPopup = document.getElementById(thisItem)
-	//use scroll() to position popup and open page
-	if(!popupIsShowing){
-		window.scroll(isUsingPopup.getBoundingClientRect().top, isUsingPopup.getBoundingClientRect().left)
-		opaqueBackground.style.display = "block"
-		subsidiaryForm.style.display = "block"
-		popupIsShowing = true
-		visibleForm = subsidiaryForm
-	} else {
-
-	}
-}
-function hidePopup(){
-	if(popupIsShowing){
-		opaqueBackground.style.display = "none"
-		visibleForm.style.display = "none"
-		popupIsShowing = false
-	} else {
-
-	}
-}
+//(ii)form containers
+const execFrm = document.querySelector("div.execFrm")
+const featureFrm = document.querySelector("div.featureFrm")
+const subsidiaryFrm = document.querySelector("div.subsidiaryFrm")
+//(ii) navigation
+const sideBarToggle = document.querySelector("div.sideBarToggle")
+const sideBar = document.querySelector("div.sideBar")
+const opaqueBg = document.querySelector("div.opaqueBg")
+const loginFrmToggle = document.querySelector("div.loginFrmToggle")
+const loginFrm = document.querySelector("div.loginFrm")
+const registerFrm = document.querySelector("div.registerFrm")
+//event listener methods
+//1. Exec form
+execTablinkFrm.addEventListener('click', function addGreenColor() {
+    //1. Exec form
+    //(i)form tablink
+    execTablinkFrm.classList.remove("whiteColor")
+    execTablinkFrm.classList.add("greenColor")
+    execTablinkFrm.classList.add("colorWhiteText")
+    //(ii)form container
+    execFrm.classList.remove("hide_stuff")
+    //2. Feature form
+    //(i)form tablink
+    featureTablinkFrm.classList.remove("greenColor")
+    featureTablinkFrm.classList.add("whiteColor")
+    featureTablinkFrm.classList.remove("colorWhiteText")
+    //(ii)form container
+    featureFrm.classList.add("hide_stuff")
+    //3. Subsidiary form
+    //(i)form tablink
+    subsidiaryTablinkFrm.classList.remove("greenColor")
+    subsidiaryTablinkFrm.classList.add("whiteColor")
+    subsidiaryTablinkFrm.classList.remove("colorWhiteText")
+    //(ii)form container
+    subsidiaryFrm.classList.add("hide_stuff")
+})
+//2. Feature form
+featureTablinkFrm.addEventListener('click', function addGreenColor() {
+    //1. Feature form
+    //(i)form tablink
+    featureTablinkFrm.classList.remove("whiteColor")
+    featureTablinkFrm.classList.add("greenColor")
+    featureTablinkFrm.classList.add("colorWhiteText")
+    //(ii)form container
+    featureFrm.classList.remove("hide_stuff")
+    //2. Executive form
+    //(i)form tablink
+    execTablinkFrm.classList.remove("greenColor")
+    execTablinkFrm.classList.add("whiteColor")
+    execTablinkFrm.classList.remove("colorWhiteText")
+    //(ii)form container
+    execFrm.classList.add("hide_stuff")
+    //3. Subsidiary form
+    //(i)form tablink
+    subsidiaryTablinkFrm.classList.remove("greenColor")
+    subsidiaryTablinkFrm.classList.add("whiteColor")
+    subsidiaryTablinkFrm.classList.remove("colorWhiteText")
+    //(ii)form container
+    subsidiaryFrm.classList.add("hide_stuff")
+})
+//3. Subsidiary form
+subsidiaryTablinkFrm.addEventListener('click', function addGreenColor() {
+    //1. Subsidiary form
+    //(i)form tablink
+    subsidiaryTablinkFrm.classList.remove("whiteColor")
+    subsidiaryTablinkFrm.classList.add("greenColor")
+    subsidiaryTablinkFrm.classList.add("colorWhiteText")
+    //(ii) form container
+    subsidiaryFrm.classList.remove("hide_stuff")
+    //2. Subsidiary form
+    //(i) form tablink
+    featureTablinkFrm.classList.remove("greenColor")
+    featureTablinkFrm.classList.add("whiteColor")
+    featureTablinkFrm.classList.remove("colorWhiteText")
+    //(ii) form container
+    featureFrm.classList.add("hide_stuff")
+    //3. Exec form
+    //(ii) form tablink
+    execTablinkFrm.classList.remove("greenColor")
+    execTablinkFrm.classList.add("whiteColor")
+    execTablinkFrm.classList.remove("colorWhiteText")
+    //(ii) form container
+    execFrm.classList.add("hide_stuff")
+})
+//4. Sidebar
+sideBarToggle.addEventListener('click', function displaySideBar(){
+    event.preventDefault()
+    if(!isSideBarShowing){
+        sideBar.classList.remove("hide_stuff")
+        opaqueBg.classList.remove("hide_stuff")
+        sideBar.classList.add("mySidebarAnimation")
+        sideBar.addEventListener('animationend', function stopAnimatingSideBar(e){
+            sideBar.classList.remove("mySidebarAnimation")
+        })
+        isSideBarShowing = true
+    } else {
+        sideBar.classList.add("hide_stuff")
+        opaqueBg.classList.add("hide_stuff")
+        isSideBarShowing = false
+    }
+})
+//5. Login Form
+loginFrmToggle.addEventListener('click', function displayLoginForm(){
+    event.preventDefault()
+    if(!isLoginFormShowing){
+        if(!isLoggedIn){
+            loginTablink.click()
+        } else {
+            console.log(`already logged`)
+        }
+        opaqueBg.classList.remove("hide_stuff")
+        isLoginFormShowing = true
+    } else {
+        loginFrm.classList.add("hide_stuff")
+        accessTablinks.classList.add("hide_stuff")
+        opaqueBg.classList.add("hide_stuff")
+        isLoginFormShowing = false
+    }
+})
+//(i) Register Tablink of
+registerTablink.addEventListener('click', function showRegisterActions(){
+    accessTablinks.classList.remove("hide_stuff")
+    accessTabContents.classList.remove("hide_stuff")
+    registerTablink.classList.remove("whiteColor")
+    registerTablink.classList.add("greenColor", "colorWhiteText")
+    registerFrm.classList.remove("hide_stuff")
+    loginTablink.classList.remove("greenColor", "colorWhiteText")
+    loginTablink.classList.add("whiteColor")
+    loginFrm.classList.add("hide_stuff")
+})
+//(ii) Login Tablink of
+loginTablink.addEventListener('click', function showLoginActions(){
+    accessTablinks.classList.remove("hide_stuff")
+    accessTabContents.classList.remove("hide_stuff")
+    loginTablink.classList.remove("whiteColor")
+    loginTablink.classList.add("greenColor", "colorWhiteText")
+    loginFrm.classList.remove("hide_stuff")
+    registerTablink.classList.remove("greenColor", "colorWhiteText")
+    registerTablink.classList.add("whiteColor")
+    registerFrm.classList.add("hide_stuff")
+})
+execTablinkFrm.click()
+console.log(`script.js loaded`)

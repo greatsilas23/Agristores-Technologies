@@ -4,8 +4,23 @@ const cors = require('cors')
 const dbConfig = require("./db.config.js")
 const Sequelize = require("sequelize")
 const db = require("./app/models")
+const {Client} = require('pg')
 db.sequelize.sync()
 
+const client = new Client({
+	host: 'localhost',
+	user: 'postgresql',
+	password: 'secret',
+	database: 'demo',
+	port: '5432'
+})
+client.connect(port, (err) => {
+	if (err) {
+		console.error(err)
+	} else {
+		console.log(`connected`)	
+	}
+})
 const app = express()
 const port = process.env.port || 4000
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
