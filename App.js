@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, setState, useState } from 'react';
 import { Linking, StyleSheet, Text, View, ScrollView, Image, TextInput, Button, TouchableOpacity } from 'react-native';
 import Separator from './components/Separator.js'
 import Card from './components/Card.js'
@@ -6,181 +6,153 @@ import SmallCard from './components/SmallCard.js'
 import MenuBar from './components/MenuBar.js'
 import TabLink from './components/TabLink.js'
 import TabContent from './components/TabContent.js'
-import background from './res/img_background.jpg'
-import icon from './res/icon.png'
-import coo from './res/coo.jpeg'
-import cio from './res/cio.jpg'
-import ceo from './res/ceo_blair.jpg'
-import cto from './res/cto.jpg'
-import cco from './res/cco.jpg'
-import git from './res/git.png'
-import vegetables from './res/vegetables.png'
-import fruits from './res/fruits.png'
-import beverages from './res/beverages.png'
-import liveTreesAndPlants from './res/live_plants.jpeg'
-import animalProducts from './res/animal_products.jpeg'
-import goal from './res/aim.svg'
-import mission from './res/mission.png'
-import target from './res/target.png'
-import location from './res/location.png'
-import availability from './res/availability.png'
-import year from './res/year.png'
-import sponsor from './res/sponsor.png'
-import licence from './res/licence.png'
-import facebook from './res/facebook.png'
-import linkedin from './res/in.png'
-import instagram from './res/instagram.png'
-import mail from './res/mail.png'
+import Resources from './Resources.js'
 export default class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-        showAbout: true,
-        showDiversification: true,
-        showDepartments: true,
-        showFeatures: true,
-        showFeedback: true,
+        showAbout: false,
+        showDiversification: false,
+        showDepartments: false,
+        showFeatures: false,
+        showFeedback: false,
         showTopBar: true,
         showMenu: true,
-        showForms: true,
         separators: {
             about: 'ABOUT',
             diversifications: 'DIVERSIFICATION',
             departments: 'DEPARTMENTS',
             features: 'FEATURED',
-            forms: 'FORMS',
-            records: 'RECORDS',
             feedback: 'FEEDBACK'
         },
         about: [
-            {content: 'goal', description: 'To establish an online service that connects our clients with agriculture suppliers from allover the world', image: goal },
-            {content: 'mission', description: 'To supply agriculture globally at affordable rates', image: mission},
-            {content: 'target', description: 'Europe, North America, Asia', image: target},
-            {content: 'location', description: 'online', image: location},
-            {content: 'availability', description: '24 hours', image: availability},
-            {content: 'year', description: '2021', image: year},
-            {content: 'sponsor', description: 'Nyamwas-ENT', image: sponsor},
-            {content: 'licence', description: 'copywright 2021', image: licence}
+            {content: 'goal', description: 'To establish an online service that connects our clients with agriculture suppliers from allover the world', image: Resources.goal },
+            {content: 'mission', description: 'To supply agriculture globally at affordable rates', image: Resources.mission},
+            {content: 'target', description: 'Europe, North America, Asia', image: Resources.target},
+            {content: 'location', description: 'online', image: Resources.location},
+            {content: 'availability', description: '24 hours', image: Resources.availability},
+            {content: 'year', description: '2021', image: Resources.year},
+            {content: 'sponsor', description: 'Nyamwas-ENT', image: Resources.sponsor},
+            {content: 'licence', description: 'copywright 2021', image: Resources.licence}
         ],
         diversifications: [
-            {content: 'AgriPay', description: 'Agripay', image: git},
-            {content: 'AgriNews', description: 'Agrinews', image: git},
-            {content: 'Agristores Warehouses', image: git},
-            {content: 'Agristores Digital Information and Information Platforms', image: git},
-            {content: 'Agristores Logistics and Transport Networks', image: git}
+            {content: 'AgriPay', description: 'Agripay', image: Resources.git},
+            {content: 'AgriNews', description: 'Agrinews', image: Resources.git},
+            {content: 'Agristores Warehouses', description: 'Agristores Warehouses', image: Resources.git},
+            {content: 'Agristores Digital Information and Information Platforms', description: 'Agristores Digital and Information Platforms', image: Resources.git},
+            {content: 'Agristores Logistics and Transport Networks', description: 'Agristores Logistics and Transport Networks', image: Resources.git}
         ],
         departments: [
-            {content: 'CCO', description: 'Chief Coordination Officer', image: cco},
-            {content: 'CIO', description: 'Chief Internal Officer', image: cio},
-            {content: 'CEO', description: 'Chief Executive Officer', image: ceo},
-            {content: 'COO', description: 'Chief Operations Officer', image: coo},
-            {content: 'CTO', description: 'Chief Technology Officer', image: cto}
+            {content: 'CCO', description: 'Chief Coordination Officer', image: Resources.cco},
+            {content: 'CIO', description: 'Chief Internal Officer', image: Resources.cio},
+            {content: 'CEO', description: 'Chief Executive Officer', image: Resources.ceo},
+            {content: 'COO', description: 'Chief Operations Officer', image: Resources.coo},
+            {content: 'CTO', description: 'Chief Technology Officer', image: Resources.cto}
         ],
         features: [
-            {content: 'Vegetables', image: vegetables},
-            {content: 'Fruits', image: fruits},
-            {content: 'Beverages', image: beverages},
-            {content: 'Live Trees And Plants', image: liveTreesAndPlants},
-            {content: 'Animal Products', image: animalProducts},
+            {content: 'Vegetables', image: Resources.vegetables},
+            {content: 'Fruits', image: Resources.fruits},
+            {content: 'Beverages', image: Resources.beverages},
+            {content: 'Live Trees And Plants', image: Resources.liveTreesAndPlants},
+            {content: 'Animal Products', image: Resources.animalProducts},
         ],
-        forms: {
-            tabLinks: [
-                { content: 'executive' },
-                { content: 'feature' },
-                { content: 'subsidiary' }
-            ],
-            tabContents: [
-                {content: 'Executive', fieldOne: 'Name', fieldTwo: 'Department'},
-                {content: 'Feature', fieldOne: 'Id', fieldTwo: 'Feature'},
-                {content: 'Subsidiary', fieldOne: 'Id', fieldTwo: 'Subsidiary'}
-            ]
-        },
-        records: {},
         feedbacks: [
-             {content: 'Instagram', image: instagram},
-             {content: 'LinkedIn', image: linkedin},
-             {content: 'Facebook', image: facebook},
-             {content: 'Github', image: git},
-             {content: 'E-Mail', image: mail}
+             {content: 'Instagram', image: Resources.instagram},
+             {content: 'LinkedIn', image: Resources.linkedin},
+             {content: 'Facebook', image: Resources.facebook},
+             {content: 'Github', image: Resources.git},
+             {content: 'E-Mail', image: Resources.mail}
         ]
     }
   }
-  handleLaunch = () => {
-    this.setState({ showMenu: true})
-    this.setState({ showTopBar: true})
-    this.setState({ showRoot: false})
+  handleAbout = () => {
+	if(this.state.showAbout){
+		this.setState({showAbout: false})
+	} else {
+		this.setState({showAbout: true})
+	}
   }
-
+  handleDiversification = () => {
+	if(this.state.showDiversification){
+		this.setState({showDiversification: false})
+	} else {
+		this.setState({showDiversification: true})
+	}
+  }
+  handleDepartments = () => {
+	if(this.state.showDepartments){
+		this.setState({showDepartments: false})
+	} else {
+		this.setState({showDepartments: true})
+	}
+  }
+  handleFeatures = () => {
+	if(this.state.showFeatures){
+		this.setState({showFeatures: false})
+	} else {
+		this.setState({showFeatures: true})
+	}
+  }
+  handleFeedbacks = () => {
+	if(this.state.showFeedbacks){
+		this.setState({showFeedbacks: false})
+	} else {
+		this.setState({showFeedbacks: true})
+	}
+  }
   render(){
       return (
         <View
             style={styles.root}
         >
-            {this.state.showTopBar && <MenuBar></MenuBar>}
-            {this.state.showMenu &&
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <Image style={{width: '60vw', height: '70vh'}} source={background}/>
-                <Image style={{height: '10vh', width: '10vw', position: 'absolute', top: '42vh', left: '25vw'}} source={icon}/>
-                <Text style={{fontSize: '4vh', color: '#fff', fontWeight: 'bold', position: 'absolute', top: '30vh', left: '15vw'}}>AGRISTORES TECHNOLOGIES</Text>
-                <Separator
-                    separatorText={this.state.separators.about}></Separator>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.cardContainer} >
-                {this.state.showAbout &&
-                    this.state.about.map((item) => <Card itemHeading={item.content} itemDescription={item.description} itemImage={item.image}></Card>)
-                }
-                </ScrollView>
-                <Separator separatorText={this.state.separators.diversifications}></Separator>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.cardContainer}>
-                {this.state.showDiversification &&
-                    this.state.diversifications.map((diversification) => <Card itemHeading={diversification.content} itemImage={diversification.image}></Card>)
-                }
-                </ScrollView>
-                <Separator separatorText={this.state.separators.departments}></Separator>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.cardContainer}>
-                {this.state.showDepartments &&
-                    this.state.departments.map((department) => <Card itemHeading={department.content} itemDescription={department.description} itemImage={department.image}></Card>)
-                }
-                </ScrollView>
-                <Separator separatorText={this.state.separators.features}></Separator>
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.cardContainer}>
-                {this.state.showFeatures &&
-                    this.state.features.map((feature) => <Card itemHeading={feature.content} itemImage={feature.image}></Card>)
-                }
-                </ScrollView>
-                <Separator separatorText={this.state.separators.forms}></Separator>
-                {this.state.showForms &&
-                <View style={styles.forms}>
-                    {this.state.forms.tabLinks.map((tabLink) => {<TabLink itemContent={tabLink.content}></TabLink>})}
-                    {this.state.forms.tabContents.map((tabContent) => {<TabContent itemContent={tabContent.content} itemFieldOne={tabContent.content} itemFieldTwo={tabContent.content}></TabContent>})}
-                </View>}
-                <Separator separatorText={this.state.separators.feedback}></Separator>
-                <View style={styles.smallCardContainer}>
-                {this.state.showFeedback &&
-                    this.state.feedbacks.map((feedback) => <SmallCard itemHeading={feedback.content} itemImage={feedback.image}></SmallCard>)
-                }
-                </View>
-            </ScrollView>}
+	    <ScrollView>
+	    <TouchableOpacity onPress={this.handleAbout}><Text style={styles.separator}>{this.state.separators.about}</Text></TouchableOpacity>
+            {this.state.showAbout && this.state.about.map(item => <View style={styles.card}><Image source={item.image} style={styles.image}></Image><View style={styles.cardDetails}><View style={styles.content}>{item.content}</View><View style={styles.description}>{item.description}</View></View></View>)}
+
+	    <TouchableOpacity onPress={this.handleDiversification}><Text style={styles.separator}>{this.state.separators.diversifications}</Text></TouchableOpacity>
+            {this.state.showDiversification && this.state.diversifications.map(item => <View style={styles.card}><Image source={item.image} style={styles.image}></Image><View style={styles.cardDetails}><View style={styles.content}>{item.content}</View><View style={styles.description}>{item.description}</View></View></View>)}
+
+	    <TouchableOpacity onPress={this.handleDepartments}><Text style={styles.separator}>{this.state.separators.departments}</Text></TouchableOpacity>
+            {this.state.showDepartments && this.state.departments.map(item => <View style={styles.card}><Image source={item.image} style={styles.image}></Image><View style={styles.cardDetails}><View style={styles.content}>{item.content}</View><View style={styles.description}>{item.description}</View></View></View>)}
+
+	    <TouchableOpacity onPress={this.handleFeatures}><Text style={styles.separator}>{this.state.separators.features}</Text></TouchableOpacity>
+            {this.state.showFeatures && this.state.features.map(item => <View style={styles.card}><Image source={item.image} style={styles.image}></Image><View style={styles.cardDetails}><View style={styles.content}>{item.content}</View><View style={styles.description}>{item.description}</View></View></View>)}
+
+	    <TouchableOpacity onPress={this.handleFeedbacks}><Text style={styles.separator}>{this.state.separators.feedbacks}</Text></TouchableOpacity>
+            {this.state.showFeedbacks && this.state.feedbacks.map(item => <View style={styles.card}><Image source={item.image} style={styles.image}></Image><View style={styles.cardDetails}><View style={styles.content}>{item.content}</View><View style={styles.description}>{item.description}</View></View></View>)}
+            </ScrollView>
         </View>
       )
   }
 }
 const styles = StyleSheet.create({
     root: {
-        width: '60vw',
+        width: '100vw',
         height: '100vh',
-        backgroundColor: '#fff'
+        backgroundColor: '#555'
     },
-    cardContainer: {
-        width: '60vw',
-        height: '45vh',
-        backgroundColor: '#fff',
+    separator: {
+	fontSize: '5vh',
+	color: '#000'
     },
-    smallCardContainer: {
-        width: '60vw',
-        height: '45vh',
-        backgroundColor: '#fff',
-        flexDirection: 'row',
-        flexWrap: 'wrap'
+    description: {
+	fontSize: '3vh',
+	color: '#555'
     },
-
+    image: {
+        width: '6vw',
+	height: '7vh'
+    },
+    card: {
+	backgroundColor: '#fff', 
+	height: '10vh', 
+	width: '95vw',
+	margin: '2vw',
+	boxShadow: '2vw 2vw 2vw rgba(0,0,0,0.5)', 
+	flexDirection: 'row',
+	borderRadius: '3vw'
+    },
+    cardDetails: {
+	flexDirection: 'column',
+    }
 })

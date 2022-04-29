@@ -18,16 +18,32 @@ export default function MenuBar(props){
         </View>
     )
 }
+const invert = (color) => {
+          color = color.replace('rgb(', '');
+          color = color.replace(')', '');
+          color = color.replace('rgba(', '');
+          let colors = color.split(',');
+          let r = colors[0].replace(' ', '');
+          let g = colors[1].replace(' ', '');
+          let b = colors[2].replace(' ', '');
+          let a = (colors.length > 3) ? colors[3].replace(' ', '') : 1;
+          r = ~r & 255;
+          g = ~g & 255;
+          b = ~b & 255;
+          return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + a + ')';
+    }
 const styles = StyleSheet.create({
     menuIcon: {
-        width: '5vw',
-        height: '5vh',
-        margin: '1.5vw'
+        width: '10vw',
+        height: '10vh',
+        margin: '1.5vw',
+        backgroundColor: '#060',
+        borderRadius: '5vw'
     },
     menuBar: {
         width: '60vw',
-        height: '8vh',
-        backgroundColor: '#0f0',
+        height: '13vh',
+        backgroundColor: '#060',
         flexDirection: 'row'
     }
 })
