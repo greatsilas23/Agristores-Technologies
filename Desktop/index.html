@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="charset" content="utf-8">
+      <title>Library-Project</title>
+    </head>
+    <body>
+       <header></header>
+       <nav></nav>
+       <aside></aside>
+       <section></section>
+       <footer></footer>
+    </body>
+    <script type="text/javascript">
+      
+
+
+       let x = new Array()
+       class A{
+        constructor(x){
+          this.id = x.id 
+          this.name = x.name.toString().toLowerCase().trim()
+
+          this.description = x.description.toString()
+          this.isEmpty = false
+        }
+        function getNext(){
+           this.id !== '' && this.id !== 0 ? return this.id++ : return
+        }
+        function getPrev(){
+
+           this.id !== '' && this.id !== 0 ? return this.id-- : return 
+        }
+        function isEmpty(){
+           this.description.length >= 0 ? return false : return true
+        }
+     }
+     switch($('nav').childNodes[1].value){
+       case 'next':
+
+
+
+
+         x.push(new A({id: 1, name: 'foo', description: ''}))
+
+         $('section').innerHTML += x.filter((item) => item === $('nav').childNodes[1].value)
+         break
+       case 'prev':
+
+         break
+       default:
+          console.log()
+          break
+      }
+     </script>
+   </html>
+  

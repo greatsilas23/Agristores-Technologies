@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Date created: Sep 24, 2021 */
 /*Date modified: Jan 4, 2022 */
 
@@ -474,3 +475,44 @@
 ::-webkit-scrollbar {
     display: none;
 }
+=======
+.container
+{
+  
+  display: flex;
+
+  flex-direction: row; 
+
+
+  padding: 4vw;
+  width: 80vw;
+  height: 80vh;
+  background-color: #96cc39;
+  border-radius: 2vw;
+}
+
+.hide
+{
+
+  display: none;
+}
+
+.card
+{
+  width: 30vw;  
+  margin: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+
+  height: 30vh;
+  box-shadow: 2vw 2vw 2vw rgba(0,0,0,0.5);
+  background-color: #c0ec83;
+  border-radius: 2vw;
+}
+
+
+>>>>>>> d4a44fdcf0ed3b402a5a51450008ad6832470434

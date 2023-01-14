@@ -1,0 +1,20 @@
+{
+  {
+   id: "a",
+   name: "fictional",
+   description: "a factual narrative"
+  }, 
+  {
+   id: "b",
+   name: "non-fictional",
+   description: "a dated narrative"
+
+  }
+  {
+    id: "c",
+    name: "",
+    description: ""
+  }
+}
+
+

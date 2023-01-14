@@ -1,0 +1,12 @@
+{
+  {
+    id: 'a',
+    description: 'New Game'
+  },
+  {
+    id: 'b',
+    description: 'Load Game'
+  }
+
+}
+

@@ -1,0 +1,17 @@
+{
+   { 
+     id: 'a',
+     name: 'Foo'
+   },
+   {
+     id: 'b',
+     name: 'Bar'
+   }
+   {
+     id: 'c',
+     name: ''
+   } 
+
+}
+
+
