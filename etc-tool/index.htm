@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="charset" content="utf-8">
+<meta name="description" content="authenticate a user using a form application software">
+<meta name="author" content="greatsilas23, wolverine4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>&copy; login and reg</title>
+</head>
+<body>
+<header></header><nav></nav><aside></aside><article></article><footer></footer>
+</body>
+<script type="text/javascript">
+class set{
+constructor(username, email, password){
+this.username = username
+this.email = email
+this.password = password
+this.isEmpty = false
+}
+}
+class login extends set{
+constructor(){
+super()
+this.isEmpty = false
+}
+get(){
+if(this.isEmpty !== null){
+return this.username
+} else {
+return 'empty'
+}
+}
+document.querySelector('body').addEventListener('load', () => {
+let item = new set('user001', 'usr@gmail.com', '12345')
+console.log(new login().get())
+document.querySelector('article').innerHTML += '<form action="http://localhost:4000/login/?id=4?username".concat(item.username).concat("?email=").concat(item.email).concat("?password=").concat(item.password) method="_post" target="_blank" onsubmit="validate();">').concat('<label for="username">').concat('username').concat('</label>').concat('<input type="text" id="username" placeholder="user001"/>').concat('<label for="password">').concat('password').concat('</label>').concat('<input type="password" id="password" placeholder="*****"/>').concat('<input type="submit">').concat('</form>')
+function validate(key, value){ if(key == value){ return true }else{ return false }}
+if(validate('4',document.querySelector('form').password.value)item.password != null && item.password == value) == true){ window.alert('success') document.querySelector('article').innerHTML = value } else { window.alert('password or username did not match')}
+})
+
+</script>
+</html>
+
+ 
